@@ -7,7 +7,15 @@ public class MyWorld extends World {
         Elephant elephont = new Elephant();
         addObject(elephont, 300, 200);
         
+        createBanana();
+    }
+    
+    // Create a new banana at random location at top of screen
+    public void createBanana()
+    {
         Banana banana = new Banana();
-        addObject(banana, 300, 0);
+        int x = Greenfoot.getRandomNumber(600);
+        int y = 0;
+        addObject(banana, x, y);
     }
 }
