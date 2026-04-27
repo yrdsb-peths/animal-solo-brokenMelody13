@@ -1,6 +1,10 @@
 import greenfoot.*;
 
-public class MyWorld extends World {
+public class MyWorld extends World 
+{
+    public int score = 0;
+    Label scoreLabel;    
+    
     public MyWorld() {
         super(600, 400, 1);
         
@@ -10,10 +14,18 @@ public class MyWorld extends World {
         addObject(elephont, 300, 200);
         
         // Create a label
-        Label scoreLabel = new Label(0, 80);
+        scoreLabel = new Label(0, 80);
         addObject(scoreLabel, 50, 50);
         
         createBanana();
+    }
+    
+    //Increase score
+    
+    public void increaseScore()
+    {
+        score++;
+        scoreLabel.setValue(score);
     }
     
     // Create a new banana at random location at top of screen

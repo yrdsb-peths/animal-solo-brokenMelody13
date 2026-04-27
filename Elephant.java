@@ -37,6 +37,7 @@ public class Elephant extends Actor
             removeTouching(Banana.class);
             MyWorld world = (MyWorld) getWorld();
             world.createBanana();
+            world.increaseScore();
         }
         // eat the banana and spawn new banana if a banana is eaten
         
