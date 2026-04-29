@@ -9,7 +9,25 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Elephant extends Actor
 {
     GreenfootSound elephantSound = new GreenfootSound("elephantSound.mp3");
-    GreenfootImage idle = new GreenfootImage();
+    GreenfootImage[] idle = new GreenfootImage[8];
+    
+    public Elephant()// The code gets run when object is created
+    {
+        for(int i = 0; i < 8; i++)
+        {
+            idle[i] = new GreenfootImage("images/elephant_idle/Idle" + i + ".png");
+        }
+        setImage(idle[0]);
+    }
+    
+    
+    //Animate the elephant
+    int imageIndex = 0;
+    public void animateElephant()
+    {
+        setImage(idle[imageIndex]);
+        imageIndex = (imageIndex + 1) % idle.length;
+    }
     
     public void act()
     {
@@ -25,6 +43,8 @@ public class Elephant extends Actor
         
         // Remove banana if elephont touches it
         eat();
+        
+        animateElephant(); // Animate the elephant
     }
     
     public void eat()
