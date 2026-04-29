@@ -35,6 +35,7 @@ public class Elephant extends Actor
             MyWorld world = (MyWorld) getWorld();
             world.createBanana();
             world.increaseScore();
+            elephantSound.play();
         }
         // eat the banana and spawn new banana if a banana is eaten
         
