@@ -17,7 +17,7 @@ public class MyWorld extends World
         scoreLabel = new Label(0, 80);
         addObject(scoreLabel, 50, 50);
         
-        createBanana();
+        createWatermelon();
     }
     
     //End the game and appear "GameOver"
@@ -39,11 +39,11 @@ public class MyWorld extends World
     }
     
     // Create a new banana at random location at top of screen
-    public void createBanana()
+    public void createWatermelon()
     {
-        Banana banana = new Banana();
+        Watermelon watermelon = new Watermelon();
         int x = Greenfoot.getRandomNumber(600);
         int y = 0;
-        addObject(banana, x, y);
+        addObject(watermelon, x, y);
     }
 }

@@ -81,11 +81,11 @@ public class Elephant extends Actor
     
     public void eat()
     {
-        if(isTouching(Banana.class))
+        if(isTouching(Watermelon.class))
         {
-            removeTouching(Banana.class);
+            removeTouching(Watermelon.class);
             MyWorld world = (MyWorld) getWorld();
-            world.createBanana();
+            world.createWatermelon();
             world.increaseScore();
             elephantSound.play();
         }
