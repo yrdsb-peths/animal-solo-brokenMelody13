@@ -8,6 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Watermelon extends Actor
 {
+    int speed = 1;
+    
     public Watermelon()
     {
         GreenfootImage img = getImage();
@@ -25,5 +27,10 @@ public class Watermelon extends Actor
             world.gameOver();
             world.removeObject(this);
         }
+    }
+    
+    public void setSpeed(int spd)
+    {
+        
     }
 }
