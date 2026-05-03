@@ -37,12 +37,17 @@ public class MyWorld extends World
         score++;
 
         scoreLabel.setValue(score);
+        if(score % 5 == 0)
+        {
+            level += 2;
+        }
     }
     
     // Create a new banana at random location at top of screen
     public void createWatermelon()
     {
         Watermelon watermelon = new Watermelon();
+        watermelon.setSpeed(level);
         int x = Greenfoot.getRandomNumber(600);
         int y = 0;
         addObject(watermelon, x, y);

@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Watermelon extends Actor
 {
-    int speed = 1;
+    private int speed = 2;
     
     public Watermelon()
     {
@@ -19,7 +19,9 @@ public class Watermelon extends Actor
     public void act()
     {
         // Add your action code here.
-        setLocation(getX(), getY() + 2);
+        int x = getX();
+        int y = getY() + speed;
+        setLocation(x, y);
         
         MyWorld world = (MyWorld) getWorld();
         if(getY() >= world.getHeight())
@@ -31,6 +33,6 @@ public class Watermelon extends Actor
     
     public void setSpeed(int spd)
     {
-        
+        speed = spd;
     }
 }
